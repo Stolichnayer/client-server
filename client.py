@@ -11,8 +11,7 @@ s.connect((IP, PORT))
 
 s.send(MESSAGE.encode("utf-8"))
 
-data = s.recv(BUFFER_SIZE)
-data = data.decode("utf-8")
+data = s.recv(BUFFER_SIZE).decode("utf-8")
 
 s.close()
 
