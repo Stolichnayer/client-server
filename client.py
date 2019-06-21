@@ -14,11 +14,11 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Establish a connection to the server, initiate the three-way handshake.
 s.connect((IP, PORT))
 
-# Encode to utf-8 and send the message to server.
-s.send(MESSAGE.encode("utf-8"))
+# Encode (string to bytes) and send the message to server.
+s.send(MESSAGE.encode())
 
-# Receive server's data and decode to utf-8.
-data = s.recv(BUFFER_SIZE).decode("utf-8")
+# Receive server's data and decode (bytes to string).
+data = s.recv(BUFFER_SIZE).decode()
 
 print(f"\n[Client]: Received data: {data}")
 

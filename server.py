@@ -25,8 +25,8 @@ print(f"\n[Server]: Connection from {address} has been established!")
 
 # Infinite loop: loop over blocking calls to conn.recv().
 while True:
-    # Receive client's data and decode to utf-8.
-    data = conn.recv(BUFFER_SIZE).decode("utf-8")
+    # Receive client's data and decode (bytes to string).
+    data = conn.recv(BUFFER_SIZE).decode()
 
     # Break if empty bytes object b'' is returned.
     if not data:
@@ -34,8 +34,8 @@ while True:
 
     print(f"[Server]: Received data: {data} ")
 
-    # Encode to utf-8 and send the message to client.
-    conn.send(MESSAGE.encode("utf-8"))
+    # Encode (string to bytes) and send the message to client.
+    conn.send(MESSAGE.encode())
 
 # Close the connection.
 conn.close()
