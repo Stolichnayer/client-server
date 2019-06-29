@@ -1,0 +1,11 @@
+
+Pinging www.google.com [2a00:1450:4001:809::2004] with 32 bytes of data:
+Reply from 2a00:1450:4001:809::2004: time=57ms 
+Reply from 2a00:1450:4001:809::2004: time=58ms 
+Reply from 2a00:1450:4001:809::2004: time=57ms 
+Reply from 2a00:1450:4001:809::2004: time=58ms 
+
+Ping statistics for 2a00:1450:4001:809::2004:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 57ms, Maximum = 58ms, Average = 57ms
